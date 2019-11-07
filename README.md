@@ -6,7 +6,7 @@ To run test use
 ./gradlew firefox
 
 
- and othe options
+ and other options
  
  
  see Build.gradle for details
