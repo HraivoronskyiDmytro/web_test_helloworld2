@@ -1,37 +1,30 @@
-import com.codeborne.selenide.ElementsCollection;
+import App.BaseTest;
 import org.junit.Test;
 
-import java.io.File;
-
-import static com.codeborne.selenide.Selenide.open;
-
-public class TestClass {
+public class TestClass extends BaseTest {
 
 
     @Test
 
     public void Test() {
-        open("https://beta.caspar-health.com/en/#/user/sign_in");
-        new LoginPage().login("IXE0865", "78350619");
+
+        app.openSignInPage();
+//        app.signIn.login("IXE0865", "78350619");
+//        app.myPatient.addPatient();
+//        app.newPatient.fillPesonalInfo();
+//        app.newPatient.clickSave();
+//        app.myPatient.storePasswordandCloseDialog();
+//        app.myPatient.logOut();
+       // app.signIn.login(app.myPatient.login, app.myPatient.password);
+        app.signIn.login("XPY8342", "37224260");
+        app.tos.verifyTOSPage();
+        app.tos.verifyTOSPage();
+
+
+    }
+
+
         /*
-        ElementsCollection e = $()
-        //*[@class="stats-container"]//*[@uisref="core.new-patient"] click
-        //*[@formcontrolname="first_name"]
-        //*[@formcontrolname="last_name"]
-
-        //*[@aria-label="Day"] или //*[@aria-label="Day"]//div[@class="mat-select-arrow"]
-
-        //*[mat-option]/mat-option[6] -опшинсы
-//*[@aria-label="Month"] или //*[@aria-label="Month"]//div[@class="mat-select-arrow"]
-//*[mat-option]/mat-option[6] -опшинсы
-
-//*[@aria-label="Year"] или //*[@aria-label="Year"]//div[@class="mat-select-arrow"]
-//*[mat-option]/mat-option[6]
-
-//*[@aria-label="Day"] или //*[@aria-label="Day"]//div[@class="mat-select-arrow"
-// *[mat-option]/mat-option[6]
- -
-        //*[@type="submit"]
 
 
                 QVB2386
@@ -50,7 +43,14 @@ public class TestClass {
 
                 Hereby you have access to your training plan at any time as well as receiving precise exercise instructions and general informations for your therapy.
 
+ //*[@class='tos-large text-left']/p[1]
+I hereby agree to the terms of use of Caspar relating to my therapy with the attending medical facility. I also authorise the facility for release of medical information.
+Please be aware of the Caspar terms and conditions as well as the data privacy policy.
+ //*[@class='tos-large text-left']/p[2]
 
+ //*[@class="mat-button"] - Sign_out
+
+  //*[@class="tos-accept ml-auto mat-ripple caspar-button"][@disabled]
 
 
 
@@ -71,7 +71,7 @@ public class TestClass {
 
 
        */
-    }
+
 }
 
 

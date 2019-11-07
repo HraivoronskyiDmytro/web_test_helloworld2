@@ -1,17 +1,19 @@
+package Pages;
+
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LoginPage {
+public class SignInPage {
 
     private SelenideElement loginField = $(byXpath("//*[@formcontrolname='login']"));
-    private SelenideElement password = $(byXpath("//*[@formcontrolname='password']"));
+    private SelenideElement passwordField = $(byXpath("//*[@formcontrolname='password']"));
+
 
     public void login(String login, String pass) {
         loginField.val(login);
-        password.val(pass).pressEnter();
+        passwordField.val(pass).pressEnter();
 
 
     }
