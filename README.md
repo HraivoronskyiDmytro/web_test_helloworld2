@@ -10,3 +10,5 @@ To run test use
  
  
  see Build.gradle for details
+
+used Gradle 5.6.2
